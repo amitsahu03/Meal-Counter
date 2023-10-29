@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Counter</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="logo.png" alt="">
+        </div>
+    </div>
+    <div class="middle">
+        <div class="title">
+            <h2>Meals Count Data</h2>
+        </div>
+        <div class="main">
+                    <div class="mainLeft">
+                        <div class="form">
+                            <form name="submit-to-google-sheet" id = "sheet" action="https://sheetdb.io/api/v1/a9e0043cw1157" method="post">
+                                <p>
+                                    <label for="breakfast">Date</label>
+                                <input type="date" name="Date" id="date" readonly >
+                                
+                                </p>
+                                <p>
+                                    <label for="breakfast">BreakFast</label>
+                                <input type="number" name="Breakfast" required >
+                                
+                                </p>
+                                <p>
+                                    <label for="breakfast">Lunch</label>
+                                <input type="number" name="Lunch"  required>
+                                </p>
+                                <p>
+                                    <label for="breakfast">Dinner(Veg)</label>
+                                <input type="number" name="Dinner" required >
+                                </p>
+                                <p>
+                                    <label for="breakfast">Dinner(Non-Veg)</label>
+                                    <input type="number" name="Dinner(Non-Veg)" required > 
+                                </p>
+                                <p>
+                                    <!-- <button type="submit" class="button">Add</button> -->
+                                    <input type="submit" value="Add" id = "btn" class="button"></p>
+                                <span id="span"></span>
+                            </form>
+                        </div>
+    
+                    </div>
+                    <div class="mainRight">
+                        <h1 class="sub-title">Excel-Sheet</h1>
+                        <table id="table">
+                            <tr>
+                                <th>Date</th>
+                              <th>BreakFast</th>
+    
+                              <th>Lunch</th>
+                              <th>Dinner(Veg)</th>
+                              <th>Dinner(Non-Veg)</th>
+                            </tr>
+                            <tr>
+                              <td>Alfreds Futterkiste</td>
+                              <td>Maria Anders</td>
+                              <td>Germany</td>
+                              <td>sjwmd</td>
+                            <td>ssjcj</td>
+                            </tr>
+                            <tr>
+                              <td>Centro comercial Moctezuma</td>
+                              <td>Francisco Chang</td>
+                              <td>Mexico</td>
+                              <td>cdhv d</td>
+                              <td>nc dsjbc</td>
+                            </tr>
+                          </table>
+                    </div>
+                
+    
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <h3>Copyright@2023 || Made by Amit Sahu</h3>
+        </div>
+    </div>
+    <script>
+        const dateInput = document.getElementById('date');
+        const currentDate = new Date();
+        dateInput.valueAsDate = currentDate;
+
+        
+
+        let form = document.getElementById('sheet')
+        form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(form.action, { method: 'POST', body: new FormData(form)})
+      .then(response => response.json())
+      .catch(error => console.error('Error!', error.message))
+  })
+    </script>
+    
+</body>
+</html>
