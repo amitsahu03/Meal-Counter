@@ -6,7 +6,7 @@
 }
 body{
    /* background: #262626; */
-   color: white;
+   color: rgb(0, 0, 0);
 }
 .header{
     background: rgb(240, 240, 240);
@@ -21,10 +21,11 @@ body{
     font-style: italic;
     text-decoration: underline;
     font-weight: 500;
+    color: #262626;
 
 }
 .middle{
-    background: #262626;
+    background: #ffffff;
     margin: 20px;
     padding: 20px;
 
@@ -42,17 +43,18 @@ body{
 .mainLeft{
     flex-wrap: wrap;
     flex-basis: 40%;
-    background: #ff004f;
+    background: #ffffff;
     box-shadow: 0 0 20px #bac3c3;
     border: 1px solid #000000;
     padding: 15px 15px;
+    border-radius: 15px;
 }
 .mainLeft form{
     flex-wrap: wrap;
     width: auto;
     border: 0;
     outline: none;
-    background: #262626;
+    background: #bac3c3;
     padding: 15px;
     margin: 25px 0;
     color: #fff;
@@ -84,7 +86,7 @@ body{
     align-items: center;
     margin: auto;
     color: white;
-    border: 1px solid #ff004f;
+    border: 5px solid #ff004f;
     background: none;
     
 }
@@ -96,15 +98,16 @@ body{
     flex-wrap: wrap;
     flex-basis: 55%;
     padding: 15px 15px;
-    background: #ff004f;
+    background: #ffffff;
     margin: 0 25px;
     padding: 25px;
     border: 1px solid #000000;
     box-shadow: 0 0 20px #bac3c3;
     text-align: center;
+    border-radius: 15px;
 }
 tr, th , td{
-    border: 1px dashed #fff;
+    border: 1px dashed #fd8c8c;
     border-collapse: collapse;
     padding: 5px;
     font-size: 15px;
@@ -113,7 +116,7 @@ tr, th , td{
 table{
     width: 100%;
     margin-top: 15px;
-    border: 3px solid #fff;
+    border: 3px solid #000000;
     border-collapse: collapse;
 }
 @media only screen and (max-width: 600px){
