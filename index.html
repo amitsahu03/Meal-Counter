@@ -54,28 +54,7 @@
                     <div class="mainRight">
                         <h1 class="sub-title">Excel-Sheet</h1>
                         <table id="table">
-                            <tr>
-                                <th>Date</th>
-                              <th>BreakFast</th>
-    
-                              <th>Lunch</th>
-                              <th>Dinner(Veg)</th>
-                              <th>Dinner(Non-Veg)</th>
-                            </tr>
-                            <tr>
-                              <td>Alfreds Futterkiste</td>
-                              <td>Maria Anders</td>
-                              <td>Germany</td>
-                              <td>sjwmd</td>
-                            <td>ssjcj</td>
-                            </tr>
-                            <tr>
-                              <td>Centro comercial Moctezuma</td>
-                              <td>Francisco Chang</td>
-                              <td>Mexico</td>
-                              <td>cdhv d</td>
-                              <td>nc dsjbc</td>
-                            </tr>
+                            
                           </table>
                     </div>
                 
@@ -87,21 +66,7 @@
             <h3>Copyright@2023 || Made by Amit Sahu</h3>
         </div>
     </div>
-    <script>
-        const dateInput = document.getElementById('date');
-        const currentDate = new Date();
-        dateInput.valueAsDate = currentDate;
-
-        
-
-        let form = document.getElementById('sheet')
-        form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(form.action, { method: 'POST', body: new FormData(form)})
-      .then(response => response.json())
-      .catch(error => console.error('Error!', error.message))
-  })
-    </script>
-    
 </body>
+<script src="main.js"></script>
+
 </html>
